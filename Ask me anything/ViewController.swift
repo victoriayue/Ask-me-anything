@@ -10,11 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var AnswerImageView: UIImageView!
+    
+    @IBAction func answerButtonPress(_ sender: UIButton) {
+        let answer = [ #imageLiteral(resourceName: "Yes. Good idea."), #imageLiteral(resourceName: "No. I don't think so"), #imageLiteral(resourceName: "I have no idea") ]
+        AnswerImageView.image = answer[Int.random(in: 0...2)]
     }
-
-
+    
 }
 
